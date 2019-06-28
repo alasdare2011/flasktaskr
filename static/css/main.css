@@ -1,0 +1,37 @@
+.container {
+    background: #f4f4f4;
+    border: 2px solid #000;
+    margin: 2em auto;
+    padding: 0.8em;
+    width: 30em;
+
+}
+
+.login-wrapper {
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.login-wrapper label {
+    display: inline-block;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.flash, .error {
+    background: #000;
+    color: #fff;
+    padding: 0.5em;
+}
