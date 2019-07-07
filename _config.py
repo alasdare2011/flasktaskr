@@ -4,8 +4,6 @@ import os #misc. operating systems interface
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 DATABASE = "flasktaskr.db"
-USERNAME = "admin"
-PASSWORD = "admin"
 CSRF_ENABLED = True #used for cross-site request forgery prevention
 SECRET_KEY = "us6rhmM+fTrWB8p" #used in conjunction with WTF_CSRF_ENABLED
                                 #to create a cryptographic token 
