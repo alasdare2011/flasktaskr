@@ -55,6 +55,7 @@ class AllTests(unittest.TestCase):
         db.session.add(new_user)
         db.session.commit()
 
+
         #tests
 
     def test_users_can_register(self):
@@ -105,6 +106,26 @@ class AllTests(unittest.TestCase):
     def test_not_logged_in_users_cannot_logout(self):
         response = self.logout()
         self.assertNotIn(b'Goodbye!', response.data)
+
+    def test_default_user_role(self):
+
+        db.session.add(
+            User(
+                "Johnny",
+                "john@doe.com",
+                "johnny"
+            )
+        )
+
+        db.session.commit()
+
+        users = db.session.query(User).all()
+        print(users)
+        for user in users:
+            self.assertEquals(user.role, 'user')
+
+
+
 
 if __name__ == "__main__":
     unittest.main()
