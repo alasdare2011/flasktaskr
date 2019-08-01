@@ -10,6 +10,7 @@ SECRET_KEY = "us6rhmM+fTrWB8p" #used in conjunction with WTF_CSRF_ENABLED
                                 #to validate a form 
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+DEBUG = False
 
 #define the full path of the database
 DATABASE_PATH = os.path.join(basedir, DATABASE)
